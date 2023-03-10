@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5936984497624027092}
   - component: {fileID: 3092658904686080813}
   - component: {fileID: 1701119966869462800}
+  - component: {fileID: 1486579592881586315}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +100,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _timeDestruction: 5
+--- !u!135 &1486579592881586315
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910305733853042339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
