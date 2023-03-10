@@ -45,6 +45,15 @@ public class Player : MonoBehaviour
             _transform.position = new Vector3(13, _transform.position.y, _transform.position.z);
         }
 
+        if(_transform.position.y >=5)
+        {
+            _transform.position = new Vector3(_transform.position.x, -5, _transform.position.z);
+        }
+
+        else if(_transform.position.y < -5){
+            _transform.position = new Vector3(_transform.position.x, 5, _transform.position.z);
+        }
+
         // fire a lazer 
         // if the player presses down the space bar, a lazer will shoot
         if(Input.GetButtonDown("Jump")){

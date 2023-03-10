@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{   
-    [SerializeField] private float live;
-    [SerializeField] private GameObject dead;   
+{ 
+    [SerializeField]
+    private float _timeDestruction = 5;
 
-    public void Damage(float damage)
+    // Start is called before the first frame update
+    void Start()
     {
-        live = live - damage;
-        if(live <= 0)
-        {
-            Dead();
-        }
+        Destroy(gameObject, _timeDestruction);
     }
 
-    private void Dead()
-    {
+    private void OnTriggerEnter2D(Collider2D other){
         Destroy(gameObject);
+        Debug.Log("dd");
     }
 }
