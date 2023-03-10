@@ -66,5 +66,8 @@ public class Player : MonoBehaviour
             );
         }
         
+        // create OnTrigger
+        // if the enemy collides with player, player will getvdestroyed
+
     }
 }
