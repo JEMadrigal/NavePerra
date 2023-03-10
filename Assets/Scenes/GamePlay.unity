@@ -1154,7 +1154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfa5b8e8174b42e9ab111a26e06506f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 12
+  _speed: 10
   _lazer: {fileID: 1701119966869462800, guid: 2c108e29818ec41689762d0921f43f6a, type: 3}
 --- !u!1 &1644077714
 GameObject:

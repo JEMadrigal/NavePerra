@@ -20,6 +20,12 @@ public class Player : MonoBehaviour
         _transform = transform;
     }
 
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Enemy")){
+            Destroy(gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -56,15 +62,12 @@ public class Player : MonoBehaviour
 
         // fire a lazer 
         // if the player presses down the space bar, a lazer will shoot
-        if(Input.GetButtonDown("Jump")){
-            print("JUMP");
-            
+        if(Input.GetButtonDown("Jump")){            
             Instantiate(
                 _lazer, 
                 transform.position, 
                 transform.rotation
             );
         }
-        
     }
 }

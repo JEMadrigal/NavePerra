@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float _timeDestruction = 5;
 
+    public GameObject ObScore;
+    public int value;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +17,9 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        Destroy(gameObject);
-        Debug.Log("dd");
+        if(other.CompareTag("Proyectil")){
+            Destroy(gameObject);
+            ObScore.GetComponent<GUIManager>().score += value;
+        }
     }
 }
